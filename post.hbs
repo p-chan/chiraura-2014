@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+  <header class="header">
+    <a href="{{@blog.url}}" class="blogLogo"><img src="{{@blog.logo}}" height="80" width="80" alt=""></a>
+    <h1 class="blogTitle"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+  </header>
+  <main class="main">
+    <article class="post {{post_class}}">
+    {{#post}}
+        <header class="postHeader">
+          <a class="postThumb" href="{{{url}}}"></a>
+          <h1 class="postTitle"><a href="{{{url}}}">{{{title}}}</a></h1>
+          <span class="postMeta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> &middot; <span class="postTags">{{tags separator=" , "}}</span></span>
+        </header>
+        {{content}}
+        <footer class="postFooter">
+          <ul class="socialBtn">
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chiraura.me{{{url}}}" data-text="{{{title}}}" data-via="p1ch_jp" data-lang="ja" data-related="p1ch_jp">ツイート</a></li>
+            <li><a href="http://b.hatena.ne.jp/entry/http://chiraura.me{{{url}}}" class="hatena-bookmark-button" data-hatena-bookmark-title="{{{title}}}" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
+          </ul>
+        </footer>
+    {{/post}}
+    </article>
+
+</main>

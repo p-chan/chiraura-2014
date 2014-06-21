@@ -1,0 +1,3 @@
+$(function() {
+  $("#cover").prependTo(".postThumb");
+});

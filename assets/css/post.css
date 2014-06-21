@@ -1,0 +1,363 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* color area */
+/*----------*/
+html {
+  color: #5d5d5d;
+  font-size: 62.5%;
+  font-family: 'Lato', "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
+  html ::selection {
+    color: #fff;
+    background: #45ada8; }
+
+body {
+  position: relative;
+  z-index: 1;
+  background: #faf9f4; }
+
+.header {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 11.2rem 0 6.4rem;
+  text-align: center; }
+  .header .blogTitle {
+    margin: -0.4rem 0 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 4.0rem;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    .header .blogTitle a {
+      color: #bbb;
+      text-decoration: none;
+      -moz-transition-property: color;
+      -o-transition-property: color;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -moz-transition-duration: 0.15s;
+      -o-transition-duration: 0.15s;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s; }
+      .header .blogTitle a:hover {
+        color: #ffa39c; }
+  .header .blogSummary {
+    margin: 0.4rem;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #bbb; }
+
+.main {
+  max-width: 72rem;
+  margin: 0 auto 3.2rem;
+  padding: 0 0 0;
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .main .post {
+    padding: 0 7.2rem;
+    background: url("../img/bg02.png");
+    background-repeat: repeat-x;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    *zoom: 1;
+    -moz-transition-property: background;
+    -o-transition-property: background;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -moz-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s; }
+    .main .post .postHeader {
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center; }
+      .main .post .postHeader .postThumb > img {
+        width: 9.6rem;
+        height: 9.6rem;
+        border: 3px solid #fff;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
+      .main .post .postHeader .postTitle {
+        font-size: 2.4rem;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.4; }
+        .main .post .postHeader .postTitle a {
+          color: #5d5d5d;
+          text-decoration: none;
+          -moz-transition-property: color;
+          -o-transition-property: color;
+          -webkit-transition-property: color;
+          transition-property: color;
+          -moz-transition-duration: 0.15s;
+          -o-transition-duration: 0.15s;
+          -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s; }
+          .main .post .postHeader .postTitle a:hover {
+            color: #45ada8; }
+      .main .post .postHeader .postMeta {
+        margin: 0;
+        padding: 0;
+        font-size: 1.4rem;
+        font-style: italic;
+        color: #999;
+        letter-spacing: 0.05rem; }
+        .main .post .postHeader .postMeta .postTags a {
+          color: #999;
+          border-bottom: 1px solid #eee;
+          text-decoration: none; }
+          .main .post .postHeader .postMeta .postTags a:hover {
+            border-bottom: 1px solid #ccc; }
+      .main .post .postHeader:after {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 1px;
+        margin: 3.2rem auto 4.4rem;
+        background: #ddd; }
+    .main .post h2 {
+      margin: 1.6em 0 0;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #444;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .main .post h3 {
+      margin: 1.2em 0 0;
+      font-size: 2.0rem;
+      font-weight: bold;
+      color: #444;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .main .post p {
+      margin: 1.2em 0 0; }
+    .main .post a {
+      color: #45ada8;
+      text-decoration: none;
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
+      -moz-transition-duration: 0.15s;
+      -o-transition-duration: 0.15s;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s; }
+      .main .post a:hover {
+        opacity: 0.7; }
+    .main .post img {
+      max-width: 100%; }
+    .main .post ul {
+      margin: 1.2em 0 0;
+      padding: 0 0 0 2em; }
+      .main .post ul li {
+        list-style-type: disc; }
+    .main .post ol {
+      margin: 1.2em 0 0;
+      padding: 0 0 0 2.4em; }
+      .main .post ol li {
+        list-style-type: decimal; }
+    .main .post hr {
+      width: 20px;
+      height: 1px;
+      margin: 4rem auto 4rem;
+      border: none;
+      background: #ddd; }
+    .main .post table {
+      margin: 1.2em 0 0; }
+      .main .post table thead {
+        background: #f0f0f0; }
+      .main .post table tr:nth-child(even) {
+        background: #fafafa; }
+      .main .post table th {
+        padding: .5em 1em;
+        border: 1px solid #ddd;
+        font-weight: bold;
+        color: #444;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      .main .post table td {
+        padding: .5em 1em;
+        border: 1px solid #ddd; }
+    .main .post blockquote {
+      margin: 1.2em 0 0;
+      padding: .3em 0 .15em 1em;
+      border-left: 3px solid #ddd; }
+      .main .post blockquote > *:first-child {
+        margin: 0; }
+    .main .post pre {
+      margin: 1.2em 0 0;
+      padding: 1.5em;
+      background: #f1f1f1;
+      border: none;
+      font-family: 'Source Code Pro';
+      font-size: 1.4rem;
+      line-height: 1.6;
+      letter-spacing: 0;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; }
+      .main .post pre > code {
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none; }
+    .main .post code {
+      margin: 0 .2em;
+      padding: 0 .1em .1em .2em;
+      background: #F7FAFB;
+      border: 1px solid #E3EDF3;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    .main .post .postFooter {
+      margin: 8rem 0 4rem; }
+      .main .post .postFooter:before {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 1px;
+        margin: 0 auto 2.4rem;
+        background: #ddd; }
+      .main .post .postFooter .socialBtn {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        overflow: hidden;
+        *zoom: 1; }
+        .main .post .postFooter .socialBtn li {
+          display: inline-block;
+          list-style: none; }
+  .main .pagination {
+    position: relative;
+    margin: 4rem 0 0;
+    text-align: center;
+    overflow: hidden;
+    *zoom: 1; }
+    .main .pagination .newer-posts, .main .pagination .older-posts {
+      display: inline-block;
+      position: absolute;
+      padding: 0.8rem 1.6rem;
+      border: 2px solid #eee;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      border-radius: 50px;
+      color: #999;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+      -moz-transition-property: border;
+      -o-transition-property: border;
+      -webkit-transition-property: border;
+      transition-property: border;
+      -moz-transition-duration: 0.15s;
+      -o-transition-duration: 0.15s;
+      -webkit-transition-duration: 0.15s;
+      transition-duration: 0.15s; }
+      .main .pagination .newer-posts:hover, .main .pagination .older-posts:hover {
+        border: 2px solid #ccc; }
+    .main .pagination .page-number {
+      display: inline-block;
+      margin: 1.0rem 0;
+      font-size: 1.4rem; }
+    .main .pagination .newer-posts {
+      left: 0; }
+    .main .pagination .older-posts {
+      right: 0; }
+
+.footer {
+  margin: 3.2rem 0 2.4rem;
+  font-size: 1.4rem;
+  color: #999;
+  line-height: 1.6;
+  text-align: center; }
+  .footer .author {
+    margin: 0 0 0.4rem; }
+    .footer .author a {
+      border-bottom: none; }
+      .footer .author a img {
+        border: 1px solid #fff;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px; }
+  .footer a {
+    color: #ffa39c;
+    border-bottom: 1px dashed #ffa39c;
+    text-decoration: none;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -moz-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s; }
+    .footer a:hover {
+      opacity: 0.70; }
+
+@media only screen and (max-width: 640px) {
+  .main .post {
+    padding: 0 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em; }
+
+  .footer {
+    font-size: 1.2rem; } }
